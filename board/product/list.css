@@ -1,0 +1,90 @@
+.dnd_module_412b99c6c625b0a5045e55e068b4ef28 input[type="checkbox"] { width:10px; height:10px; border:0; -webkit-appearance:none; cursor:pointer; background:url('//img.echosting.cafe24.com/skin/dnd_ko_KR/common/layout/form/bg_checkbox.png') no-repeat 0 0; background-size:10px auto; }
+
+
+.dnd_module_412b99c6c625b0a5045e55e068b4ef28 .boardListPackage .brdList .description2 { width:100%;line-height:25px; }
+.dnd_module_412b99c6c625b0a5045e55e068b4ef28 .boardListPackage .brdList .description2 .notice {display:inline-block;width:80px;text-align:center;}
+.dnd_module_412b99c6c625b0a5045e55e068b4ef28 .boardListPackage .brdList .description2 .text { position:absolute; left:0;right:0;text-align:center; width:90%;margin:0 auto;}
+.dnd_module_412b99c6c625b0a5045e55e068b4ef28 .boardListPackage .brdList .description .icon_img2 img,
+.dnd_module_412b99c6c625b0a5045e55e068b4ef28 .boardListPackage .brdList .description .icon_img img{ padding-top:5px;}
+
+.dnd_module_412b99c6c625b0a5045e55e068b4ef28 .boardListPackage {  }
+.dnd_module_412b99c6c625b0a5045e55e068b4ef28 .boardListPackage .write { padding:15px; text-align:right;}
+
+/* 정렬 */
+.dnd_module_412b99c6c625b0a5045e55e068b4ef28 .boardListPackage .brdSort { display:-webkit-flex; display:-ms-flex; display:flex; -webkit-flex-wrap:wrap; -ms-flex-wrap:wrap; flex-wrap:wrap; padding:0 16px 0 6px; }
+.dnd_module_412b99c6c625b0a5045e55e068b4ef28 .boardListPackage .brdSort .sort { -webkit-flex:1; -ms-flex:1; flex:1; margin:10px 0 10px 10px; }
+.dnd_module_412b99c6c625b0a5045e55e068b4ef28 .boardListPackage .brdSort .sort:empty { display:none; }
+.dnd_module_412b99c6c625b0a5045e55e068b4ef28 .boardListPackage .brdSort .sort:only-child { -webkit-flex:none; -ms-flex:none; flex:none; width:50%; }
+.dnd_module_412b99c6c625b0a5045e55e068b4ef28 .boardListPackage .brdSort .sort select { width:100%; height:28px; font-size:12px; line-height:28px; cursor:pointer; }
+
+/* 리스트 */
+.dnd_module_412b99c6c625b0a5045e55e068b4ef28 .boardListPackage .brdList {}
+.dnd_module_412b99c6c625b0a5045e55e068b4ef28 .boardListPackage .brdList li { display:-webkit-flex; display:-ms-flex; display:flex; position:relative; padding:0 0 30px 0;}
+.dnd_module_412b99c6c625b0a5045e55e068b4ef28 .boardListPackage .brdList li > .link { display:-webkit-flex; display:-ms-flex; display:flex; -webkit-flex:1; -ms-flex:1; flex:1; text-decoration:none; }
+.dnd_module_412b99c6c625b0a5045e55e068b4ef28 .boardListPackage .brdList .no { float:left; width:70px;text-align:center;display:none;}
+.dnd_module_412b99c6c625b0a5045e55e068b4ef28 .boardListPackage .brdList .thumbnail { float:left; width:100px; margin:0 15px 0 0;  }
+.dnd_module_412b99c6c625b0a5045e55e068b4ef28 .boardListPackage .brdList .thumbnail img { width:100%; }
+.dnd_module_412b99c6c625b0a5045e55e068b4ef28 .boardListPackage .brdList .description { -webkit-flex:1; -ms-flex:1; flex:1; }
+.dnd_module_412b99c6c625b0a5045e55e068b4ef28 .boardListPackage .brdList .description .subject { display:block; }
+.dnd_module_412b99c6c625b0a5045e55e068b4ef28 .boardListPackage .brdList .description .subject .notice { display:inline-block; vertical-align:middle; }
+.dnd_module_412b99c6c625b0a5045e55e068b4ef28 .boardListPackage .brdList .description .subject .text { display:inline-block; margin:0 3px 0 0; vertical-align:middle; word-break:break-all; }
+.dnd_module_412b99c6c625b0a5045e55e068b4ef28 .boardListPackage .brdList .description .subject > img { display:inline-block; vertical-align:middle; margin:0 6px 0 0; }
+.dnd_module_412b99c6c625b0a5045e55e068b4ef28 .boardListPackage .brdList .description .subject .commentCnt { margin:0 3px 0 0; font-weight:normal; font-size:9px; vertical-align:middle; }
+.dnd_module_412b99c6c625b0a5045e55e068b4ef28 .boardListPackage .brdList .description .category { display:inline-block; margin:5px 0 0;  }
+.dnd_module_412b99c6c625b0a5045e55e068b4ef28 .boardListPackage .brdList .description .info {display:block; margin:3px 0 0; }
+.dnd_module_412b99c6c625b0a5045e55e068b4ef28 .boardListPackage .brdList .description .info .point { display:inline-block; height:10px; margin:1px 3px 0 0; vertical-align:top; }
+.dnd_module_412b99c6c625b0a5045e55e068b4ef28 .boardListPackage .brdList .description .info > span:before { content:''; display:inline-block; width:1px; height:10px; margin:7px 7px 0; vertical-align:top;  }
+.dnd_module_412b99c6c625b0a5045e55e068b4ef28 .boardListPackage .brdList .description .info > span:first-child:before,
+.dnd_module_412b99c6c625b0a5045e55e068b4ef28 .boardListPackage .brdList .description .info > span.point + span:before { display:none; }
+.dnd_module_412b99c6c625b0a5045e55e068b4ef28 .boardListPackage .brdList .description .append { display:block; }
+.dnd_module_412b99c6c625b0a5045e55e068b4ef28 .boardListPackage .brdList .append { margin:3px 0 0; }
+.dnd_module_412b99c6c625b0a5045e55e068b4ef28 .boardListPackage .brdList .append > span { display:inline-block; vertical-align:middle; }
+.dnd_module_412b99c6c625b0a5045e55e068b4ef28 .boardListPackage .brdList .append > span:before { content:''; display:inline-block; width:1px; height:8px; margin:3px 4px 0; background:#dddee0; }
+.dnd_module_412b99c6c625b0a5045e55e068b4ef28 .boardListPackage .brdList .append > span:first-child:before { display:none; }
+.dnd_module_412b99c6c625b0a5045e55e068b4ef28 .boardListPackage .brdList .view { margin:10px 5px 0 -8px; }
+.dnd_module_412b99c6c625b0a5045e55e068b4ef28 .boardListPackage .brdList .view .button { width:33px; height:33px; font-size:0; }
+.dnd_module_412b99c6c625b0a5045e55e068b4ef28 .boardListPackage .brdList .view .button > img { width:12px; height:8px; }
+
+
+/* 본문읽기 설정_리스트펼치기 */
+.dnd_module_412b99c6c625b0a5045e55e068b4ef28 .boardListPackage li.contentView { display:block; padding:20px 16px 26px; font-size:13px; line-height:20px;word-break:break-all;  }
+.dnd_module_412b99c6c625b0a5045e55e068b4ef28 .boardListPackage li.contentView img { max-width:100%; }
+/* 게시글 없음 */
+.dnd_module_412b99c6c625b0a5045e55e068b4ef28 .boardListPackage .empty { padding:100px 0; text-align:center; box-sizing:border-box; }
+
+
+
+.dnd_module_412b99c6c625b0a5045e55e068b4ef28 .boardSearch {padding:20px 0;width:500px;}
+.dnd_module_412b99c6c625b0a5045e55e068b4ef28 .boardSearch .category {float:left;width:50%;}
+.dnd_module_412b99c6c625b0a5045e55e068b4ef28 .boardSearch .category select { float:left; width:48%;margin-bottom:1.5%;}
+.dnd_module_412b99c6c625b0a5045e55e068b4ef28 .boardSearch .category select:last-child { float:right;}
+.dnd_module_412b99c6c625b0a5045e55e068b4ef28 .boardSearch .search {float:right;width:48%;}
+.dnd_module_412b99c6c625b0a5045e55e068b4ef28 .boardSearch .search input#search {float:left; margin:0; width:80%;}
+.dnd_module_412b99c6c625b0a5045e55e068b4ef28 .boardSearch .search button {float:right; font-size:11px;vertical-align:bottom;width:18%;padding:0;}
+
+@media all and (max-width:992px) {
+    
+.dnd_module_412b99c6c625b0a5045e55e068b4ef28 .boardSearch {width:100%;margin:0 auto;}
+.dnd_module_412b99c6c625b0a5045e55e068b4ef28 .boardListPackage .write,
+.dnd_module_412b99c6c625b0a5045e55e068b4ef28 .boardSearch {padding:20px 0;}
+    
+.dnd_module_412b99c6c625b0a5045e55e068b4ef28 .search_inner {width:100%;margin:0 auto;}
+    
+.dnd_module_412b99c6c625b0a5045e55e068b4ef28 .boardSearch .search,
+.dnd_module_412b99c6c625b0a5045e55e068b4ef28 .boardSearch .category {float:none;width:100%;display:block;clear:both;}
+.dnd_module_412b99c6c625b0a5045e55e068b4ef28 .boardSearch .category select { float:left; width:49%;margin-bottom:1.5%;}
+.dnd_module_412b99c6c625b0a5045e55e068b4ef28 .boardSearch .category select:last-child { float:right;}
+.dnd_module_412b99c6c625b0a5045e55e068b4ef28 .boardSearch .search input#search {float:left;padding:0;margin:0; width:83.5%;}
+.dnd_module_412b99c6c625b0a5045e55e068b4ef28 .boardSearch .search button {float:right; font-size:11px;vertical-align:bottom;width:15%;}
+    
+.dnd_module_412b99c6c625b0a5045e55e068b4ef28 .boardListPackage .brdList .description .subject { margin-top:3px; }
+    
+.dnd_module_412b99c6c625b0a5045e55e068b4ef28 .boardListPackage .brdList li { padding:0 0 20px 0;}
+.button_right{margin-bottom:15px;}
+.dnd_module_412b99c6c625b0a5045e55e068b4ef28 .boardListPackage .brdList,
+.ec-base-paginate,
+.dnd_module_412b99c6c625b0a5045e55e068b4ef28 .boardSearch {border-left:0;border-right:0;}
+.dnd_module_412b99c6c625b0a5045e55e068b4ef28 .boardListPackage .brdList .no { display:none;}}
+
+
+

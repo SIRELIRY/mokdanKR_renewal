@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Swiper demo</title>
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1"
+    />
+    <!-- Link Swiper's CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Demo styles -->
+    <style>
+      .swiper {
+        width: 80vw;
+        height: 100%;
+      }
+
+      .swiper-slide {
+        text-align: center;
+        background: #fff;
+        display: flex;
+        justify-content: center;
+      }
+
+      .swiper-slide img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      .brandTxt {
+        position: absolute;
+        z-index: 10;
+        color: #fff;
+        bottom: 30px;
+      }
+      .brandTxt p {
+        margin: 0;
+      }
+      .brandTitel {
+        letter-spacing: 1px;
+        font-size: 25px;
+        font-weight: 600;
+        text-transform: uppercase;
+        word-spacing: -2px;
+      }
+      .brandDet {
+        padding: 10px 30px 0;
+        letter-spacing: -0.5px;
+        font-size: 14px;
+        font-weight: 500;
+        text-decoration: underline;
+      }
+
+      .swiper-button-prev,
+      .swiper-button-next {
+        color: #fff !important;
+      }
+      .swiper-button-prev:after,
+      .swiper-button-next:after {
+        font-size: 1.1rem !important;
+        font-weight: 600 !important;
+      }
+      .brandCon {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        background-color: #000;
+      }
+      .brandGrid {
+        width: 20vw;
+      }
+      .brandH1Title {
+        color: #fff;
+        text-transform: uppercase;
+        font-weight: 500;
+        font-size: 30px;
+        position: absolute;
+        transform: translateY(-50%) translateX(-50%) rotate(-90deg);
+        top: 50%;
+        left: 40px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- Swiper -->
+    <div class="brandCon">
+      <div class="brandGrid">
+        <span class="brandH1Title">mokdan_brand</span>
+      </div>
+      <div class="swiper mySwiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <div class="brandTxt">
+              <p class="brandTitel">inoui editons</p>
+              <p class="brandDet">
+                이곳에 브렌드 설명을 적으면 됨 가나다
+                나가나얼어ㅏ어랑니;럼이나;러마ㅣ;ㅇㄴ러마ㅣㄴㅇ럼;ㅣㅏㄴㅇ러ㅣ;ㅏㅁㅇㄴ러ㅣ;ㅏㅁㅇ널;ㅣ망널;ㅣㅏㅁㄴ어리;ㅏㅁㅇ널;ㅣㅏㅁㄴ어리;ㅏㅁ너리;ㅏ멍ㄴ;ㅣㅏ
+              </p>
+            </div>
+            <img
+              src="https://bourrienne.com/cdn/shop/files/LAURENT_DUPONT_BOURRIENNE_6X5A3591_2_copie_600x.jpg?v=1644315381"
+            />
+          </div>
+          <div class="swiper-slide">
+            <div class="brandTxt">
+              <p class="brandTitel">inoui editons</p>
+              <p class="brandDet">이곳에 브렌드 설명을 적으면 됨</p>
+            </div>
+            <img
+              src="https://bourrienne.com/cdn/shop/files/LAURENT_DUPONT_BOURRIENNE_6X5A3591_2_copie_600x.jpg?v=1644315381"
+            />
+          </div>
+        </div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+        <!-- <div class="swiper-pagination"></div> -->
+      </div>
+    </div>
+
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+
+    <!-- Initialize Swiper -->
+    <script>
+      var swiper = new Swiper(".mySwiper", {
+        spaceBetween: 60,
+        centeredSlides: true,
+        autoplay: {
+          delay: 5500,
+          disableOnInteraction: false,
+        },
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+      });
+    </script>
+  </body>
+</html>

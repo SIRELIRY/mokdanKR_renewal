@@ -1,0 +1,220 @@
+<!--@layout(/board/index.html)-->
+<div class="board_left">
+  <div id="titleArea" module="board_title_4">
+    <p>{$board_info}</p>
+    <h2>{$board_title} {$board_adult_icon}</h2>
+  </div>
+</div>
+<!--@import(/board/top.html)-->
+
+<div class="typeL">
+  <div module="board_ModifyPackage_4">
+    <!--@css(/css/module/board/modifyPackage.css)-->
+    <!--@js(/js/module/board/uccurl.js)-->
+
+    <div module="board_modify_4">
+      <!--
+            $write_success_url = /board/product/list.html
+            $product_select_url = /product/search_board_list.html
+            $order_select_url = /order/search_board_list.html
+        -->
+      <div class="ec-base-prdInfo {$display_product|display}">
+        <div class="prdBox">
+          <div class="thumbnail">
+            <a href="/product/detail.html{$param_product}"
+              ><img
+                id="{$product_img_id}"
+                src="{$url_product_img}"
+                onerror="this.src='//img.echosting.cafe24.com/skin/mobile_ko_KR/board/img_no.png'"
+                alt=""
+            /></a>
+          </div>
+          <div class="description">
+            <strong class="prdName"
+              ><a
+                href="/product/detail.html{$param_product}"
+                id="{$product_name_link_id}"
+                >{$product_name}</a
+              >{$product_icon}</strong
+            >
+            <ul class="info">
+              <li class="price">{$product_price} {$product_tax_type_text}</li>
+            </ul>
+            <div class="ec-base-button gLeft">
+              <span
+                id="{$product_view_id}"
+                class="{$display_product_info|display}"
+                ><a
+                  href="/product/detail.html{$param_product}"
+                  id="{$product_link_id}"
+                  class="btnNormal mini"
+                  >상품상세보기</a
+                ></span
+              >
+              <span class="{$display_product_select|display}"
+                ><a
+                  href="#none"
+                  onclick="{$action_product_select}"
+                  class="btnNormal mini"
+                  >상품정보선택</a
+                ></span
+              >
+              <span class="{$display_order_select|display}"
+                ><a
+                  href="#none"
+                  onclick="{$action_order_select}"
+                  class="btnNormal mini"
+                  >주문상품선택</a
+                ></span
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {$form.notice} {$form.is_post}
+      <div class="ec-base-table">
+        <table border="0">
+          <caption>
+            글 수정 폼
+          </caption>
+          <colgroup>
+            <col />
+            <col style="width: auto" />
+          </colgroup>
+          <tbody>
+            <tr class="subject">
+              <th scope="row">제목</th>
+              <td>{$form.board_category} {$form.subject}</td>
+            </tr>
+            <tr class="{$config.is_login|display}">
+              <th scope="row">작성자</th>
+              <td>{$form.writer}</td>
+            </tr>
+            <tr class="{$config.use_write_email|display}">
+              <th scope="row">이메일</th>
+              <td>{$form.email}</td>
+            </tr>
+            <tr class="{$config.is_use_point|display}">
+              <th scope="row">평점</th>
+              <td>{$form.point}</td>
+            </tr>
+            <tr>
+              <td colspan="2" class="write">{$form.content}</td>
+            </tr>
+          </tbody>
+          <tbody class="{$config.use_attach|display}">
+            <tr>
+              <th scope="row">첨부파일1</th>
+              <td>
+                <input type="text" class="upload_text" readonly="readonly" />
+                <div class="upload-btn_wrap">
+                  <button type="button" title="첨부하기">
+                    <span>첨부하기</span>
+                  </button>
+                  <input name="attach_file[]" type="file" class="input_file" />
+                </div>
+                <p>{$attached_file1}</p>
+              </td>
+            </tr>
+            <tr>
+              <th scope="row">첨부파일2</th>
+              <td>
+                <input type="text" class="upload_text2" readonly="readonly" />
+                <div class="upload-btn_wrap">
+                  <button type="button" title="첨부하기">
+                    <span>첨부하기</span>
+                  </button>
+                  <input name="attach_file[]" type="file" class="input_file2" />
+                </div>
+                <p>{$attached_file2}</p>
+              </td>
+            </tr>
+            <tr>
+              <th scope="row">첨부파일3</th>
+              <td>
+                <input type="text" class="upload_text3" readonly="readonly" />
+                <div class="upload-btn_wrap">
+                  <button type="button" title="첨부하기">
+                    <span>첨부하기</span>
+                  </button>
+                  <input name="attach_file[]" type="file" class="input_file3" />
+                </div>
+                <p>{$attached_file3}</p>
+              </td>
+            </tr>
+            <tr>
+              <th scope="row">첨부파일4</th>
+              <td>
+                <input type="text" class="upload_text4" readonly="readonly" />
+                <div class="upload-btn_wrap">
+                  <button type="button" title="첨부하기">
+                    <span>첨부하기</span>
+                  </button>
+                  <input name="attach_file[]" type="file" class="input_file4" />
+                </div>
+                <p>{$attached_file4}</p>
+              </td>
+            </tr>
+            <tr>
+              <th scope="row">첨부파일5</th>
+              <td>
+                <input type="text" class="upload_text5" readonly="readonly" />
+                <div class="upload-btn_wrap">
+                  <button type="button" title="첨부하기">
+                    <span>첨부하기</span>
+                  </button>
+                  <input name="attach_file[]" type="file" class="input_file5" />
+                </div>
+                <p>{$attached_file5}</p>
+              </td>
+            </tr>
+          </tbody>
+          <tbody>
+            <tr class="{$config.use_password|display}">
+              <th scope="row">비밀번호</th>
+              <td>{$form.password}</td>
+            </tr>
+            <tr class="{$config.use_secret|display}">
+              <th scope="row">비밀글설정</th>
+              <td>{$form.secure}</td>
+            </tr>
+            <tr class="{$config.use_captcha_write|display}">
+              <th scope="row">보안문자</th>
+              <td>{$captcha_image} {$captcha_refresh} {$form.captcha}</td>
+            </tr>
+            <tr class="{$config.is_login|display}">
+              <th scope="row">개인정보 수집 및 이용 동의</th>
+              <td>
+                {$form.privacy_agreement_radio}
+                <a
+                  href="/board/agreement.html"
+                  target="_blank"
+                  class="btn_under"
+                  >내용보기</a
+                >
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="ec-base-button justify">
+        <span class="gRight"
+          ><button
+            type="button"
+            class="button_right"
+            onclick="{$action_modify}"
+          >
+            ok
+          </button></span
+        >
+        <span class="gLeft"
+          ><a href="/board/product/list.html{$param_list}" class="button_left"
+            >cancel</a
+          ></span
+        >
+      </div>
+    </div>
+  </div>
+</div>

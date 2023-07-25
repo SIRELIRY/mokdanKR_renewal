@@ -1,0 +1,122 @@
+<nav class="sidenav" data-sidenav data-sidenav-toggle="#sidenav-toggle">
+  <div class="sidenav-brand">
+    <a href="javascript:;" id="sidenav-toggle"
+      ><img src="/web/upload/pwa/close.png"
+    /></a>
+  </div>
+
+  <ul class="sidenav-menu">
+    <li>
+      <a href="javascript:;" data-sidenav-dropdown-toggle class="active">
+        <span class="sidenav-link-title">product</span>
+        <span class="sidenav-dropdown-icon show" data-sidenav-dropdown-icon>
+          <i class="fas fa-chevron-down"></i>
+        </span>
+        <span class="sidenav-dropdown-icon" data-sidenav-dropdown-icon>
+          <i class="fas fa-chevron-up"></i>
+        </span>
+      </a>
+
+      <ul
+        class="sidenav-dropdown"
+        module="Layout_category"
+        data-sidenav-dropdown
+      >
+        <li><a href="{$link_product_list}">{$name_or_img_tag}</a></li>
+        <li><a href="{$link_product_list}">{$name_or_img_tag}</a></li>
+      </ul>
+    </li>
+    <li>
+      <a href="/lookbook/list.html?cate_no=23">
+        <span class="sidenav-link-title">lookbook</span>
+      </a>
+    </li>
+    <li>
+      <a href="javascript:;" data-sidenav-dropdown-toggle>
+        <span class="sidenav-link-title">community</span>
+        <span class="sidenav-dropdown-icon show" data-sidenav-dropdown-icon>
+          <i class="fas fa-chevron-down"></i>
+        </span>
+        <span class="sidenav-dropdown-icon" data-sidenav-dropdown-icon>
+          <i class="fas fa-chevron-up"></i>
+        </span>
+      </a>
+      <ul
+        class="sidenav-dropdown"
+        module="Layout_BoardInfo"
+        data-sidenav-dropdown
+      >
+        <li><a href="{$board_list_url}">{$board_name}</a></li>
+        <li><a href="{$board_list_url}">{$board_name}</a></li>
+      </ul>
+    </li>
+    <li>
+      <a href="/contact.html">
+        <span class="sidenav-link-title">contact</span>
+      </a>
+    </li>
+    <li class="g_item">
+      <span>magazine</span
+      ><span
+        ><a href="/board/gallery/list.html?board_no=8"><u>모두보기</u></a></span
+      >
+      <div style="display: block; clear: both"></div>
+      <div class="swiper-container swiper3" module="board_list_8">
+        <!--
+         $count = 9
+         $main_list = yes
+         $subject_cut = 25
+         $main_list_reply_view = no
+      -->
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <a href="/board/gallery/read.html{$param_read}"
+              ><img src="{$img_src}" alt="" />[{$no}] {$subject}</a
+            >
+          </div>
+          <div class="swiper-slide">
+            <a href="/board/gallery/read.html{$param_read}"
+              ><img src="{$img_src}" alt="" />[{$no}] {$subject}</a
+            >
+          </div>
+        </div>
+      </div>
+    </li>
+    <li><a href="/board/faq/list.html?board_no=3">자주묻는질문</a></li>
+    <li><a href="/about.html">회사소개</a></li>
+  </ul>
+  <div class="sidenav-bottom">
+    <a href="/member/login.html" module="Layout_statelogoff">로그인</a>
+    <a href="/member/join.html" module="Layout_statelogoff">회원가입</a>
+    <a href="{$action_logout}" module="Layout_statelogon">로그아웃</a>
+    <a href="/member/modify.html" module="Layout_statelogon">정보수정</a>
+    <a href="/myshop/index.html">마이페이지</a>
+  </div>
+</nav>
+
+<div class="top_bar"><!--@import(/layout/top.html)--></div>
+
+<div class="vwweb stickme">
+  <ul>
+    <li>
+      <a href="javascript:;" id="sidenav-toggle"
+        ><img
+          style="margin-top: 13px"
+          height="25"
+          src="/web/upload/pwa/2613045.png"
+      /></a>
+    </li>
+    <li class="logo"><a href="/" module="Layout_LogoTop">{$mall_name}</a></li>
+    <li>
+      <a href="/product/search.html"
+        ><img src="/web/upload/pwa/i_search.png" /></a
+      ><a href="/order/basket.html"
+        ><img src="/web/upload/pwa/shopping-bag.png" /><span
+          class="cart_count"
+          module="Layout_orderBasketcount"
+          >{$basket_count}</span
+        ></a
+      >
+    </li>
+  </ul>
+</div>

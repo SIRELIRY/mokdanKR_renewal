@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=yes"
+    />
+    <title></title>
+    <!--@css(/gridsystem/resource/css/vendor.css)-->
+    <!--@css(/gridsystem/resource/css/common.css)-->
+
+    <!--@css(/layout/basic/css/layout.css)-->
+    <!--@css(/layout/basic/css/ec-base-ui.css)-->
+    <!--@css(/layout/basic/css/ec-base-paginate.css)-->
+    <!--@css(/layout/basic/css/ec-base-help.css)-->
+    <!--@css(/layout/basic/css/ec-base-button.css)-->
+    <!--@css(/layout/basic/css/ec-base-box.css)-->
+    <!--@css(/layout/basic/css/ec-base-layer.css)-->
+    <!--@css(/layout/basic/css/ec-base-table.css)-->
+    <!--@css(/layout/basic/css/ec-base-fold.css)-->
+    <!--@css(/layout/basic/css/ec-base-prdInfo.css)-->
+    <!--@css(/layout/basic/css/ec-base-tooltip.css)-->
+
+    <!-- 스마트디자인에서는 JQuery 1.4.4 버전이 내장되어있습니다. 추가로 호출하면 충돌이 생길 수 있습니다. -->
+    <!--@import(/layout/basic/top.html)-->
+    <!--@css(/lookbook/style.css)-->
+  </head>
+  <body>
+    <!--@import(/layout/basic/menu.html)-->
+
+    <div id="contents22">
+      <!--@contents-->
+    </div>
+
+    <!--@import(/layout/basic/bottom.html)-->
+    <!--@import(/layout/basic/footer.html)-->
+
+    <script src="https://cdn.jsdelivr.net/combine/npm/jquery@1.12.4,npm/hammer-touchemulator@0.0.2,npm/rgbaster@1.0.0"></script>
+    <script src="/lookbook/pic.js"></script>
+    <script>
+      function setBgWithDominantColor(curIndex) {
+        var img = $(".mtf-pic-list").children().eq(curIndex).children("img")[0];
+        if (img.src.indexOf("file://") === -1) {
+          RGBaster.colors(img, {
+            paletteSize: 1,
+            success: function (payload) {
+              $(".mtf-pic-viewer").css("", payload.palette[0]);
+            },
+          });
+        }
+      }
+      $(".main").mtfpicviewer({
+        selector: "img",
+        attrSelector: "src",
+        parentSelector: "div",
+        className: "pic-viewer",
+        debug: false,
+        onChange: function (curIndex, preIndex) {
+          setBgWithDominantColor(curIndex);
+        },
+        onOpen: function (curIndex) {
+          setBgWithDominantColor(curIndex);
+        },
+        onClose: function (curIndex) {
+          var $img = $(".mtf-pic-list").children().eq(curIndex).children("img");
+          $("html,body").animate({
+            scrollTop: $('img[src="' + $img.attr("src") + '"]').offset().top,
+          });
+        },
+      });
+      location.search.indexOf("touch=on") > -1 && TouchEmulator();
+    </script>
+  </body>
+</html>

@@ -1,0 +1,25 @@
+<link rel="stylesheet" href="listPopup.css" />
+<div class="prdBoard option">
+  <div module="product_option">
+    <div class="popupTitle">size guide</div>
+    <tr class="{$item_display|display}">
+      <th scope="row" style="display: none">{$item_title}</th>
+      <td colspan="2" rel="{$item_title|striptag}">{$item_content}</td>
+    </tr>
+    <tr class="{$item_display|display}">
+      <th scope="row">{$item_title}</th>
+      <td rel="{$item_title|striptag}">{$item_content}</td>
+    </tr>
+  </div>
+  <div class="buyButton {$action_display|display}">
+    <a
+      href="#none"
+      class="button_left big {$basket_display|display}"
+      onclick="{$action_basket}"
+      >add to cart</a
+    >
+    <span class="button_left {$soldout_display|display}" style="width: 100%"
+      >sold out</span
+    >
+  </div>
+</div>

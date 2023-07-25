@@ -1,0 +1,108 @@
+.cscenter { margin-bottom:50px; border:1px solid #ddd; -moz-box-sizing:border-box; box-sizing:border-box;text-align:center}
+.cscenter ul { vertical-align:top; margin:2% 0;border-right:1px solid #eee; padding:20px 0;height:220px;width:24.5%; display:inline-block;}
+.cscenter ul:hover .big{ }
+.cscenter ul:last-child { border-right:0; }
+.cscenter img {height:65px;}
+.cscenter .img {text-align:center;padding-bottom:30px;}
+.cscenter .big {font-size:27px;font-weight:700; text-align:center;padding-bottom:30px; letter-spacing:-1px;}
+.cscenter .title {font-size:12px;color:#999;text-align:center;padding-bottom:10px;}
+.cscenter li {padding:0 40px;}
+
+.btnSub {width:80%;margin-left:10%;background:#000;border:1px solid #000;color:#fff;padding:10px 0;-moz-box-sizing:border-box; box-sizing:border-box; display:inline-block;text-align:Center;}
+.btnSub:hover {background:#222;border:1px solid #222;color:#fff;}
+.dnd_module_412b99c6c625b0a5045e55e068b4ef28 input[type="checkbox"] { width:10px; height:10px; border:0; -webkit-appearance:none; cursor:pointer; background:url('//img.echosting.cafe24.com/skin/dnd_ko_KR/common/layout/form/bg_checkbox.png') no-repeat 0 0; background-size:10px auto; }
+
+
+
+.dnd_module_412b99c6c625b0a5045e55e068b4ef28 .boardSearch { padding:50px 30px; text-align:center;}
+.dnd_module_412b99c6c625b0a5045e55e068b4ef28 .boardSearch .category { display:inline-block;}
+.dnd_module_412b99c6c625b0a5045e55e068b4ef28 .boardSearch .category2 { display:inline-block; margin-right:15px;}
+.dnd_module_412b99c6c625b0a5045e55e068b4ef28 .boardSearch .category select { display:inline-block; }
+.dnd_module_412b99c6c625b0a5045e55e068b4ef28 .boardSearch .search { display:inline-block; }
+.dnd_module_412b99c6c625b0a5045e55e068b4ef28 .boardSearch .search input#search { display:inline-block; }
+.dnd_module_412b99c6c625b0a5045e55e068b4ef28 .boardSearch .search button { vertical-align:bottom;  }
+
+
+
+
+
+.accordion-container .accordion-title {
+  position: relative;
+  margin: 0;
+  padding: 0;
+    line-height:50px;
+  font-size: 15px;border-bottom:1px solid #000;
+  font-weight: normal;
+  color: #000;
+  cursor: pointer;
+}
+
+.category {display:inline-block;width:140px; text-align:center;}
+.accordion-container .accordion-title:hover,
+.accordion-container .accordion-title:active,
+.accordion-title.open {
+  
+}
+
+.accordion-container .accordion-title::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: 25px;
+  width: 15px;
+  height: 1px;
+  transform: rotate(90deg);
+  background: #000;
+  transition: all .3s ease-in-out;
+}
+
+.accordion-container .accordion-title::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: 25px;
+  width: 15px;
+  height: 1px;
+  background: #000;
+  transition: all .2s ease-in-out;
+}
+
+.accordion-container .accordion-title.open::before {
+  transform: rotate(180deg);
+}
+
+.accordion-container .accordion-title.open::after {
+  opacity: 0;
+}
+
+.accordion-content {
+  padding:50px 0 50px 140px;
+  border-bottom: 1px solid #000;
+}
+
+/* CSS for Demo */
+.accordion-container {
+  margin: 0 auto;
+}
+
+
+
+@media all and (max-width:992px) {    
+    
+.accordion-container .accordion-title::before {
+  right: 15px;
+  width: 10px;
+  height: 1px;
+}
+
+.accordion-container .accordion-title::after {
+  right: 15px;
+  width: 10px;
+  height: 1px;
+}
+
+.accordion-container .accordion-title {font-size:11px;}
+.category {width:100px;}
+.accordion-content {font-size:11px;line-height:15px;
+  padding:20px 0;}
+    }

@@ -1,0 +1,29 @@
+<!--@layout(/board/index.html)-->
+<div class="board_left">
+  <div id="titleArea" module="board_title_1002">
+    <p>{$board_info}</p>
+    <h2>{$board_title} {$board_adult_icon}</h2>
+    <p class="imgArea">{$board_top_image}</p>
+  </div>
+</div>
+<!--@import(/board/top.html)-->
+
+<div module="board_CommentDeletePackage_1002" class="typeM">
+  <!--@css(/css/module/board/commentDeletePackage.css)-->
+
+  <div module="Board_CommentDel_1002">
+    <div class="comment">
+      <fieldset>
+        <legend>댓글삭제</legend>
+        <p class="info">
+          댓글 등록 시 입력한 비밀번호를<br />입력하여 주십시요.
+        </p>
+        <p class="password">
+          <label for="comment_password">비밀번호</label>
+          {$form.comment_password}
+          <button type="submit" class="btnNormal">확인</button>
+        </p>
+      </fieldset>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,116 @@
+<!--@layout(/layout/basic/layout.html)-->
+<!--@css(/board/faq/list.css)-->
+
+<div module="Board_ListPackage_3">
+  <div module="board_title_3">
+    <div class="titleArea">
+      <h2>{$board_title}</h2>
+    </div>
+  </div>
+</div>
+
+<div class="typeL dnd_module_412b99c6c625b0a5045e55e068b4ef28">
+  <!-- MOMA COMPONENT ID 54 : BS_상품후기 목록_게시물 목록_v01 -->
+  <div module="Board_ListPackage_3" class="boardListPackage">
+    <div module="board_search_3" class="boardSearch d_border_all">
+      <fieldset>
+        <legend>게시물 검색</legend>
+        <div class="category2">자주묻는질문</div>
+        <div class="category" style="display: none">
+          {$form.product_category_selector} {$form.search_date}
+          {$form.search_key}
+        </div>
+        <div class="search">
+          {$form.search}
+          <button class="btnNormal" onclick="{$action_search}">검색</button>
+        </div>
+      </fieldset>
+    </div>
+
+    <div class="event_tab grid6 d_border_all">
+      <!--@js(/board/faq/board_tab.js)-->
+      <ul class="menu">
+        <li>
+          <a class="move" href="/board/faq/list.html?board_no=3">전체보기</a>
+        </li>
+        <li>
+          <a class="move" href="/board/faq/list.html?board_no=3&category_no=1"
+            >배송</a
+          >
+        </li>
+        <li>
+          <a class="move" href="/board/faq/list.html?board_no=3&category_no=2"
+            >주문/결제</a
+          >
+        </li>
+        <li>
+          <a class="move" href="/board/faq/list.html?board_no=3&category_no=3"
+            >회원정보</a
+          >
+        </li>
+        <li>
+          <a class="move" href="/board/faq/list.html?board_no=3&category_no=4"
+            >취소/교환/반품</a
+          >
+        </li>
+        <li>
+          <a class="move" href="/board/faq/list.html?board_no=3&category_no=5"
+            >기타</a
+          >
+        </li>
+      </ul>
+    </div>
+
+    <div style="display: block; clear: both"></div>
+    <div class="d_border_top"></div>
+    <div module="board_list_3">
+      <!--
+            $count = 50
+            $login_page_url = /member/login.html
+            $deny_access_url = /index.html
+        -->
+
+      <div id="accordion" class="accordion-container">
+        <h4 class="accordion-title">
+          <span class="category {$category_display|display}"
+            >[{$category_name}]</span
+          >{$subject}
+        </h4>
+        <div class="accordion-content">
+          <p>{$content}</p>
+        </div>
+      </div>
+    </div>
+
+    <div
+      module="board_ButtonList_3"
+      class="ec-base-button {$write_display|display}"
+    >
+      <span class="gRight"
+        ><a href="/board/product/write.html{$param_write}" class="button_left"
+          >글쓰기</a
+        ></span
+      >
+    </div>
+  </div>
+
+  <!-- //MOMA COMPONENT ID 54 : BS_상품후기 목록_게시물 목록_v01 -->
+</div>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+<script>
+  jQuery(function ($) {
+    $(".accordion-content").css("display", "none");
+
+    $(".accordion-title").click(function () {
+      $(".accordion-title").not(this).removeClass("open");
+
+      $(".accordion-title").not(this).next().slideUp(300);
+
+      $(this).toggleClass("open");
+
+      $(this).next().slideToggle(300);
+    });
+  });
+</script>

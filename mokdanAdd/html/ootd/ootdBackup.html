@@ -1,0 +1,80 @@
+<!-- 슬라이더가 들어간 ootd임 -->
+<!--@css(/css/module/product/listnormal.css)-->
+<!--@js(/js/module/product/listnormal.js)-->
+<div class="ootdCon">
+    <!--@css(/mokdanAdd/css/main/ootd.css)-->
+      <!--스와이퍼 이미지 부분-->
+    <div class="swiper" id="ootdSwiper">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide"><div class="ootdImg" id="ootdImg01"></div></div>
+        <div class="swiper-slide"><div class="ootdImg" id="ootdImg02"></div></div>
+        <div class="swiper-slide"><div class="ootdImg" id="ootdImg03"></div></div>
+      </div>
+        <div class="OOTDbutton">
+      <div class="swiper-button-next"></div>
+      <div class="swiper-button-prev"></div>
+            </div>
+      <div class="swiper-pagination"></div>
+    </div>
+    <!--제품목록 부분-->
+    <div class="ootdRight">
+                <div class="ootdTitle">
+                  <p class="title-small">ootd inspo</p>
+                  <p class="title-bid"><span>오드리가 추천하는 ootd<span></p>
+                </div>
+                <div class="typeDesc" module="product_listnormal">
+                  <!--
+                      $cate_no = 250
+                      $count = 3
+                      $moreview = no
+                      $cache = yes
+                      $basket_result = /product/add_basket.html
+                      $basket_option = /product/basket_option.html
+                  -->
+                  <ul class="oodtProductList">
+                      <li class="ootdProductOne">
+                          <div class="thumbnail"><a href="/product/detail.html{$param}"><img src="{$image_medium}" alt="" width="86" height="86"></a></div>
+                          <div class="information">
+                              <p class="icon">{$soldout_icon}</p>
+                              <p class="name {$product_name_display|display}"><a href="/product/detail.html{$param}">{$product_name}</a></p>
+                              <p class="price {$product_price_display|display} {$product_sale_strike}">{$product_price} 원<span class="{$product_price_ref_display|display}">{$txt_product_price_ref}</span></p>
+                              <p class="summary {$summary_desc|display}">{$summary_desc}</p>
+                          </div>
+                      </li>
+                      <li class="ootdProductOne">
+                          <div class="thumbnail"><a href="/product/detail.html{$param}"><img src="{$image_medium}" alt="" width="86" height="86"></a></div>
+                          <div class="information">
+                              <p class="icon">{$soldout_icon}</p>
+                              <p class="name {$product_name_display|display}"><a href="/product/detail.html{$param}">{$product_name}</a></p>
+                              <p class="price {$product_price_display|display} {$product_sale_strike}">{$product_price} 원<span class="{$product_price_ref_display|display}">{$txt_product_price_ref}</span></p>
+                              <p class="summary {$summary_desc|display}">{$summary_desc}</p>
+                          </div>
+                      </li>
+                  </ul>
+              </div>
+              
+                <button
+                  class="ootdBtn"
+                  name="brandMore"
+                  onClick="location.href='/mokdanAdd/html/brand/brand01.html'"
+                >
+                  보러가기
+                </button>
+    </div>
+  </div>
+  <script>
+    var swiper = new Swiper("#ootdSwiper", {
+      spaceBetween: 0,
+      centeredSlides: true,
+      loop: true,
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+    });
+  </script>
+  

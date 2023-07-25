@@ -1,0 +1,94 @@
+<!--@layout(/product/index.html)-->
+<!--@css(/product/list.css)-->
+<!--@css(/css/topmenu.css)-->
+
+<!--
+            $count = 12
+            $moreview = no
+                ※ 상품진열갯수를 설정하는 변수입니다. 설정하지 않을 경우, 최대 200개의 상품이 진열 됩니다.
+                ※ 진열된 상품이 많으면, 쇼핑몰에 부하가 발생할 수 있습니다.
+            $basket_result = /product/add_basket.html
+            $basket_option = /product/basket_option.html
+        -->
+<div id="anchorBoxId_{$product_no}" class="pin">
+  <div class="inner">
+    <div class="thumbnail">
+      <div class="new">{$new_icon}</div>
+      <div class="prdImg">
+        <a href="/new/detail.html{$param}" name="anchorBoxName_{$product_no}"
+          ><img src="{$image_medium}"
+        /></a>
+      </div>
+    </div>
+    <div class="description">
+      <strong class="name"
+        ><a
+          href="/new/detail.html{$param}"
+          class="{$product_name_display|display}"
+          ><span class="title {$product_name_title_display|display}"
+            >{$product_name_title} :</span
+          >
+          {$product_name}</a
+        ></strong
+      >
+      <ul module="product_ListItem" class="spec">
+        <li class="{$item_display|display}" rel="{$item_title|striptag}">
+          <strong class="title {$item_title_display|display}"
+            >{$item_title} :</strong
+          >
+          {$item_content}
+        </li>
+        <li class="{$item_display|display}" rel="{$item_title|striptag}">
+          <strong class="title {$item_title_display|display}"
+            >{$item_title} :</strong
+          >
+          {$item_content}
+        </li>
+      </ul>
+      <span class="icon"
+        >{$soldout_icon}{$stock_icon}{$recommend_icon}{$today_arrival_icon}{$pickup_icon}{$product_icons}{$benefit_icons}</span
+      >
+    </div>
+  </div>
+</div>
+<div id="anchorBoxId_{$product_no}" class="pin">
+  <div class="inner">
+    <div class="thumbnail">
+      <div class="new">{$new_icon}</div>
+      <div class="prdImg">
+        <a href="/new/detail.html{$param}" name="anchorBoxName_{$product_no}"
+          ><img src="{$image_medium}"
+        /></a>
+      </div>
+    </div>
+    <div class="description">
+      <strong class="name"
+        ><a
+          href="/new/detail.html{$param}"
+          class="{$product_name_display|display}"
+          ><span class="title {$product_name_title_display|display}"
+            >{$product_name_title} :</span
+          >
+          {$product_name}</a
+        ></strong
+      >
+      <ul module="product_ListItem" class="spec">
+        <li class="{$item_display|display}" rel="{$item_title|striptag}">
+          <strong class="title {$item_title_display|display}"
+            >{$item_title} :</strong
+          >
+          {$item_content}
+        </li>
+        <li class="{$item_display|display}" rel="{$item_title|striptag}">
+          <strong class="title {$item_title_display|display}"
+            >{$item_title} :</strong
+          >
+          {$item_content}
+        </li>
+      </ul>
+      <span class="icon"
+        >{$soldout_icon}{$stock_icon}{$recommend_icon}{$today_arrival_icon}{$pickup_icon}{$product_icons}{$benefit_icons}</span
+      >
+    </div>
+  </div>
+</div>

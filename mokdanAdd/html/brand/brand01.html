@@ -1,0 +1,174 @@
+<!--@layout(/layout.html)-->
+
+<div class="brandTop">
+    <!--스와이퍼 부분-->
+    <div class="swiper">
+        <div class="swiper-wrapper">
+            <!-- Slides -->
+            <div class="swiper-slide"></div>
+            <div class="swiper-slide"></div>
+            <div class="swiper-slide"></div>
+        </div>
+    </div>
+    <!--브랜드 소개 부분-->
+    <div class="brandPageSec">
+        <p class="brandPageTitle">bourrienne</p>
+        <p class="brandPageDet"><span>2017년 파리에서 설립된 bourriednne은 과거의 디테일을 되살려 화이트 셔츠를 재창조합니다.<br>
+                                        어제와 오늘의 룩에서 영감을 얻어 이 유니폼을 헤리티지와 모던함의 공통 분모로 만듭니다.</span>
+                                    <p><span>호텔 소유주인 charles beigbeder와 디자이너 cecile faucheur는 2017년 완벅한 셔츠라는 단 하나의 전문성으로
+                                        bourrienne paris X를 설립했습니다.<br>
+                                        그들의 데뷔 컬렉션은 8가지 옷장 스테이플 변형을 특징으로 하며, new romantics의 과장된 빕, 스마트 오피서 칼라 및 우아한 프렌치 커스프를 포함하여
+                                        미묘한 시대적 영향을 받은 악센트로 재작업되었습니다.<br>
+                                        오늘날 이 듀오는 프랑스 수도에 있는 hotel bourrienne에서 18세기 incroyables 운동의 선구자인 그들의 뮤즈를 기리기 위해 운영되고 있습니다.<br>
+                                        각각의 스타일은 이집트와 캘리포니아에서 공수한 유기농 면이나 산뜻한 노르망디 린넨으로 제작한 후 브랜드 자체 핏 중 하나로 형태를 잡고 수작업으로 완성합니다.
+                                    </span></p></p>
+    </div>
+</div>
+
+<!--상품목록 부분-->
+<div class="dnd_module_cb512e5bb1ccf49be3df289bf203e4fc">
+  <div module="product_normalpackage">
+    <div module="product_listnormal" class="productList typeThumb">
+      <!--
+                * 카테고리 번호 입력.
+                $cate_no=323
+                $count = 21
+                    ※ 상품진열갯수를 설정하는 변수입니다. 설정하지 않을 경우, 최대 200개의 상품이 진열 됩니다.
+                    ※ 진열된 상품이 많으면, 쇼핑몰에 부하가 발생할 수 있습니다.
+                $basket_result = /product/add_basket.html
+                $basket_option = /product/basket_option.html
+            -->
+      <div class="line_inner"></div>
+      <div class="line_inner2"></div>
+
+      <ul class="prdList small">
+        <li id="anchorBoxId_{$product_no}">
+          <div class="inner">
+            <div module="Product_OptionPreview">
+              <!--@css(/css/module/product/optionPreview.css)-->
+              <div id="{$opt_preview_id}" class="prdOption">
+                <p class="ico">
+                  <img
+                    src="http://img.echosting.cafe24.com/skin/base_ko_KR/product/ico_option_arrow.gif"
+                    alt=""
+                  />
+                </p>
+                <div class="inner">
+                  <p class="close">
+                    <a href="#none" onclick="{$opt_preview_close}"
+                      ><img
+                        src="http://img.echosting.cafe24.com/skin/base_ko_KR/product/ico_option_close.gif"
+                        alt="닫기"
+                    /></a>
+                  </p>
+                  <ul module="Product_optionPreviewList">
+                    <li>{$option}</li>
+                    <li>{$option}</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="thumbnail">
+              <div class="prdImg">
+                <a
+                  href="{$link_product_detail}"
+                  name="anchorBoxName_{$product_no}"
+                  ><img
+                    src="{$image_medium}"
+                    id="{$image_medium_id}"
+                    alt="{$seo_alt_tag}"
+                /></a>
+              </div>
+            </div>
+            <div class="description">
+              <span class="engTitle">{$eng_product_name}</span>
+              <strong class="name">{$product_name}</strong>
+              <span class="productPrice">{$product_price}원</span>
+
+              <span class="icon displaynone"
+                >{$soldout_icon}{$stock_icon}{$recommend_icon}{$new_icon}{$today_arrival_icon}{$pickup_icon}{$product_icons}{$benefit_icons}</span
+              >
+            </div>
+          </div>
+        </li>
+
+        <li id="anchorBoxId_{$product_no}">
+          <div class="inner">
+            <div class="thumbnail">
+              <div class="prdImg">
+                <a
+                  href="{$link_product_detail}"
+                  name="anchorBoxName_{$product_no}"
+                  ><img
+                    src="{$image_medium}"
+                    id="{$image_medium_id}"
+                    alt="{$seo_alt_tag}"
+                /></a>
+              </div>
+            </div>
+            <div class="description">
+              <span class="engTitle">{$eng_product_name}</span>
+              <strong class="name">{$product_name}</strong>
+              <span class="productPrice">{$product_price}원</span>
+
+              <span class="icon displaynone"
+                >{$soldout_icon}{$stock_icon}{$recommend_icon}{$new_icon}{$today_arrival_icon}{$pickup_icon}{$product_icons}{$benefit_icons}</span
+              >
+            </div>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+<script>
+  const productStyle = document.querySelector(".name span");
+  productStyle.style.removeProperty("font-size");
+</script>
+
+<div module="product_normalpaging" class="ec-base-paginate typeList">
+  <!--
+            $relation_post = yes
+        -->
+  <a href="{$param_prev}" class="btnPrev">prev</a>
+  <ol>
+    <li><a href="{$param}" class="{$param_class}">{$no}</a></li>
+    <li><a href="{$param}" class="{$param_class}">{$no}</a></li>
+    <li><a href="{$param}" class="{$param_class}">{$no}</a></li>
+    <li><a href="{$param}" class="{$param_class}">{$no}</a></li>
+    <li><a href="{$param}" class="{$param_class}">{$no}</a></li>
+  </ol>
+  <a href="{$param_next}" class="btnNext">next</a>
+</div>
+
+<style>
+    :root{
+        /* color */
+        --brand-main-color:#131313;
+    }
+    .brandTop{
+        width: 100vw;
+        min-height: 300px;
+        display: flex;
+    }
+    .swiper{
+        width: 60%;
+    }
+    .brandPageSce{
+        width: 40%;
+    }
+</style>
+<script>
+  // 스와이퍼 초기화
+  const swiper = new Swiper(".swiper", {
+    // Optional parameters
+    direction: "vertical",
+    loop: true,
+    autoplay: {
+      delay: 7000,
+      disableOnInteraction: false,
+    },
+    speed: 200,
+    delay: 5000
+  });
+</script>

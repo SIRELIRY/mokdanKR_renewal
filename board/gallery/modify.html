@@ -1,0 +1,160 @@
+<!--@layout(/board/index.html)-->
+<div class="board_left">
+  <div id="titleArea" module="board_title_8">
+    <p>{$board_info}</p>
+    <h2>{$board_title} {$board_adult_icon}</h2>
+
+    <p class="imgArea">{$board_top_image}</p>
+  </div>
+</div>
+<!--@import(/board/top.html)-->
+
+<div class="typeL">
+  <div module="board_ModifyPackage_8">
+    <!--@css(/css/module/board/modifyPackage.css)-->
+    <!--@js(/js/module/board/uccurl.js)-->
+
+    <div module="board_modify_8">
+      <div class="ec-base-table">
+        <table border="0">
+          <caption>
+            글 수정 폼
+          </caption>
+          <colgroup>
+            <col />
+            <col style="width: auto" />
+          </colgroup>
+          <tbody>
+            <tr class="subject">
+              <th scope="row">제목</th>
+              <td>
+                {$form.board_category} {$form.subject} {$form.notice}
+                {$form.is_post}
+              </td>
+            </tr>
+            <tr class="{$config.is_login|display}">
+              <th scope="row">작성자</th>
+              <td>{$form.writer}</td>
+            </tr>
+            <tr class="{$config.use_write_email|display}">
+              <th scope="row">이메일</th>
+              <td>{$form.email}</td>
+            </tr>
+            <tr class="{$config.is_use_point|display}">
+              <th scope="row">평점</th>
+              <td>{$form.point}</td>
+            </tr>
+            <tr>
+              <td colspan="2" class="write">{$form.content}</td>
+            </tr>
+          </tbody>
+          <tbody class="{$config.use_attach|display}">
+            <tr>
+              <th scope="row">첨부파일1</th>
+              <td>
+                <input type="text" class="upload_text" readonly="readonly" />
+                <div class="upload-btn_wrap">
+                  <button type="button" title="첨부하기">
+                    <span>첨부하기</span>
+                  </button>
+                  <input name="attach_file[]" type="file" class="input_file" />
+                </div>
+                <p>{$attached_file1}</p>
+              </td>
+            </tr>
+            <tr>
+              <th scope="row">첨부파일2</th>
+              <td>
+                <input type="text" class="upload_text2" readonly="readonly" />
+                <div class="upload-btn_wrap">
+                  <button type="button" title="첨부하기">
+                    <span>첨부하기</span>
+                  </button>
+                  <input name="attach_file[]" type="file" class="input_file2" />
+                </div>
+                <p>{$attached_file2}</p>
+              </td>
+            </tr>
+            <tr>
+              <th scope="row">첨부파일3</th>
+              <td>
+                <input type="text" class="upload_text3" readonly="readonly" />
+                <div class="upload-btn_wrap">
+                  <button type="button" title="첨부하기">
+                    <span>첨부하기</span>
+                  </button>
+                  <input name="attach_file[]" type="file" class="input_file3" />
+                </div>
+                <p>{$attached_file3}</p>
+              </td>
+            </tr>
+            <tr>
+              <th scope="row">첨부파일4</th>
+              <td>
+                <input type="text" class="upload_text4" readonly="readonly" />
+                <div class="upload-btn_wrap">
+                  <button type="button" title="첨부하기">
+                    <span>첨부하기</span>
+                  </button>
+                  <input name="attach_file[]" type="file" class="input_file4" />
+                </div>
+                <p>{$attached_file4}</p>
+              </td>
+            </tr>
+            <tr>
+              <th scope="row">첨부파일5</th>
+              <td>
+                <input type="text" class="upload_text5" readonly="readonly" />
+                <div class="upload-btn_wrap">
+                  <button type="button" title="첨부하기">
+                    <span>첨부하기</span>
+                  </button>
+                  <input name="attach_file[]" type="file" class="input_file5" />
+                </div>
+                <p>{$attached_file5}</p>
+              </td>
+            </tr>
+          </tbody>
+          <tbody>
+            <tr class="{$config.use_password|display}">
+              <th scope="row">비밀번호</th>
+              <td>{$form.password}</td>
+            </tr>
+            <tr class="{$config.use_secret|display}">
+              <td>{$form.secure}</td>
+            </tr>
+            <tr class="{$config.use_captcha_write|display}">
+              <td>
+                {$captcha_image} {$captcha_refresh}
+                <span class="gBlank5">{$form.captcha}</span>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="{$config.is_login|display} privacy">
+        <p>{$form.privacy_agreement_radio}</p>
+        <span
+          ><a href="/board/agreement.html" target="_blank">내용보기</a></span
+        >
+      </div>
+
+      <div class="ec-base-button justify">
+        <span class="gRight"
+          ><button
+            type="button"
+            class="button_right"
+            onclick="{$action_modify}"
+          >
+            ok
+          </button></span
+        >
+        <span class="gLeft"
+          ><a href="/board/gallery/list.html{$param_list}" class="button_left"
+            >cancel</a
+          ></span
+        >
+      </div>
+    </div>
+  </div>
+</div>

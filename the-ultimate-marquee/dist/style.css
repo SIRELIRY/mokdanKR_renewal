@@ -1,0 +1,26 @@
+body{
+  margin: 0;
+}
+.top_bar{
+  padding: 0;
+  background-color: #000000;
+  padding: calc(13px + .5px)0;
+  transition: all .7s ease;
+  border-bottom: 1px solid #000;
+  z-index:10;
+}
+.text{
+  color: #fff;
+  font-size: 13px;
+  font-weight: 600;
+  transition: all .7s ease;
+}
+
+.top_bar:hover{
+  background-color: #fff;
+  transition: all .7s ease;
+  border-bottom: 1px solid #000;
+  .text{
+    color: #000;
+  }
+}

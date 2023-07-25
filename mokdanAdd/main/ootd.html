@@ -1,0 +1,82 @@
+<div class="ootdCon">
+	<!--@css(/mokdanAdd/css/main/ootd.css)-->
+    <div class="ootdImg"></div>
+    <div class="swiper" id="ootdSwiper">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">
+				<!--제품목록 부분-->
+				<div class="ootdRight">
+                    <div class="ootdTitle">
+                        <p class="title-small">ootd inspo</p>
+                        <p class="title-bid">오드리가 추천하는 ootd</p>
+                    </div>
+                    <div class="ootd-product">
+					<!--@css(/css/module/product/listnormal.css)-->
+					<!--@js(/js/module/product/product_selectsearch.js)-->
+                    <div module="product_listnormal">
+                        <!--
+                            $cate_no=332
+                            $count = 3
+                            $basket_result = /product/add_basket.html
+                            $basket_option = /product/basket_option.html
+                        -->
+                        <ul class="prdList column4">
+                            <li class="item" id="anchorBoxId_{$product_no}">
+                            <div class="box">
+                                <span class="chk"><input type="checkbox" class="{$product_compare_class} {$product_compare_display|display}" /></span>
+                                <a href="/product/detail.html{$param}" name="anchorBoxName_{$product_no}"><img src="{$image_medium}" id="{$image_medium_id}" alt="" class="thumb" /></a>
+                                <div class="status">
+                                    <div class="icon">{$soldout_icon} {$recommend_icon} {$new_icon} {$product_icons}</div>
+                                    <div class="button"><div class="option">{$option_preview_icon}</div> {$basket_icon} {$zoom_icon}</div>
+                                </div>
+                                <p class="name">
+                                    <strong><a href="/product/detail.html{$param}" class="{$product_name_display|display}"><span class="title {$product_name_title_display|display}">{$product_name_title} :</span> {$product_name}</a></strong>
+                                </p>
+                                <ul module="product_ListItem">
+                                    <li class="{$item_display|display}"><strong class="title {$item_title_display|display}">{$item_title} :</strong> {$item_content}</li>
+                                    <li class="{$item_display|display}"><strong class="title {$item_title_display|display}">{$item_title} :</strong> {$item_content}</li>
+                                </ul>
+                            </div>
+                            </li>
+                            <li class="item" id="anchorBoxId_{$product_no}">
+                            <div class="box">
+                                <span class="chk"><input type="checkbox" class="{$product_compare_class} {$product_compare_display|display}" /></span>
+                                <a href="/product/detail.html{$param}" name="anchorBoxName_{$product_no}"><img src="{$image_medium}" id="{$image_medium_id}" alt="" class="thumb" /></a>
+                                <div class="status">
+                                    <div class="icon">{$soldout_icon} {$recommend_icon} {$new_icon} {$product_icons}</div>
+                                    <div class="button"><div class="option">{$option_preview_icon}</div> {$basket_icon} {$zoom_icon}</div>
+                                </div>
+                                <p class="name">
+                                    <strong><a href="/product/detail.html{$param}" class="{$product_name_display|display}"><span class="title {$product_name_title_display|display}">{$product_name_title} :</span> {$product_name}</a></strong>
+                                </p>
+                                <ul module="product_ListItem">
+                                    <li class="{$item_display|display}"><strong class="title {$item_title_display|display}">{$item_title} :</strong> {$item_content}</li>
+                                    <li class="{$item_display|display}"><strong class="title {$item_title_display|display}">{$item_title} :</strong> {$item_content}</li>
+                                </ul>
+                            </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                    </div>
+                    <button class="ootdBtn" name="brandMore" onClick="location.href='/mokdanAdd/html/brand/brand01.html'">보러가기</button>
+                </div>
+            </div>
+        </div>
+	</div>
+</div>
+<script>
+  var swiper = new Swiper("#ootdSwiper", {
+    spaceBetween: 60,
+    centeredSlides: true,
+    loop: true,
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+  });
+</script>

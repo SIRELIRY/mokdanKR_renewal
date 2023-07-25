@@ -1,0 +1,111 @@
+:root{
+  --my-Black:#131313;
+  --my-White:#fff;
+  --my-Font-color:var(--my-White);
+  --my-Line:var(--my-White);
+  }
+/*@font-face {
+  font-family: 'GangwonEdu_OTFBoldA';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2201-2@1.0/GangwonEdu_OTFBoldA.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}*/
+.abouts {
+font-family: "Montserrat";
+text-transform: capitalize;
+background: url("https://images.unsplash.com/photo-1524292332709-b33366a7f165?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80")
+no-repeat center / cover;
+background-color: var(--my-White);
+width: 100vw;
+height: 90vh;
+color: var(--my-Font-color);
+font-size: 15px;
+justify-content: center;
+align-items: center;
+min-height: 70vh;
+  line-height: 24px;
+  
+}
+.aboutTop{
+  width:100vw;
+  height:90vh;
+  -webkit-backdrop-filter: blur(6px);
+  backdrop-filter: blur(6px);
+  display: flex;
+  align-items: center;
+  }
+.left_top{
+  width: 50%;
+  }
+.left_bot{
+  width: 50%;
+  text-align: center;
+  }
+
+.about_left {
+  height: 100%;
+width: 50%;
+}
+.border_side{
+  border-right: 1px solid var(--my-Black);
+  border-left: 1px solid var(--my-Black);
+  }
+.about_det {
+  width: fit-content;
+  height: fit-content;
+  padding: 30px 15px;
+  border-left: 1px solid var(--my-Black);
+}
+.about_en{
+  margin-top: 13px;
+  font-size: 13px;
+  line-height: 15px;
+  }
+.about_ko{
+  font-size: 15px;
+  line-height:17px;
+  }
+.about_address{
+  position:absolute;
+  width: 100%;
+  }
+.about_det_con{
+  width:33.3%;
+  }
+.about_det_add{
+  border-top: 1px solid var(--my-Line);
+  padding: 10px 0;
+transition: all .6s ease-in-out;
+  }
+.hover:hover{
+  background-color:var(--my-White);
+  color: var(--my-Black);
+      transition: all .6s ease-in-out;
+}
+.abouts p{
+margin-inline: 15px;
+}
+.address_tit{
+      text-transform: uppercase;
+  font-weight: 700;
+  font-size: 20px;
+  }
+.high{
+text-transform: uppercase;
+font-weight: bold;
+}
+.title_ko{
+  font-family: 'Noto Sans KR';
+  font-size: 30px;
+  font-weight: 500;
+  line-height:38px;
+  margin-bottom:10px;
+      }
+
+.left_bot img {animation: rotate_image 20s linear infinite;transform-origin: 50% 50%;}
+
+@keyframes rotate_image{
+  100% {
+      transform: rotate(360deg);
+  }
+}
